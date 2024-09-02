@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome To The Hotel</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrious/dist/qrious.min.js"></script>
+   
+    <link rel="stylesheet" href="style.css">
+    <style>
+ 
+ body{
+    margin-top: 80px;
+    height:100%;
+    width: 100%;
+    
+
+  }
+  form{
+    width: auto;
+    max-width:350px;
+    margin-top: 20px;
+    
+    background-color: rgba(255, 255, 255, 0.6); /* White with 70% opacity */
+    border-radius: 15px; /* Optional: Rounded corners */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Box shadow for the glass effect */
+    transform: translateZ(30px); /* 3D effect */
+    padding: 40px; /* Padding to make text readable */
+font-weight: bold;
+
+}
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        input[type="email"], input[type="phone"], input[type="date"], input[type="time"], input[type="Ticket_price"], input[type="Total Price"] {
+          display: block;
+          width: 70%;
+          padding: 5px;
+          margin-bottom: 10px;
+          border: 1px solid black;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+        input[type="text"]{
+          display: block;
+          width: 70%;
+          padding: 5px;
+          margin-bottom: 10px;
+          border: 1px solid black;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+        input[type="submit"] {
+          background-color: #4CAF50;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+       button{
+        background-color: blue;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding:5px;
+        color: white;
+       }
+       
+      </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div id="logo">
+      <a href="home.html">  <img src="Gully-View-11-2-2024.jpg" alt="zomato logo"></a>
+    </div>
+    <ul>
+        <li class="item"><a href="home.html">Home</a></li>
+        <li class="item"><a href="services.html">Services</a></li>
+        <li class="item"><a href="contactus.html">FeedBack</a></li>
+        <li class="item"><a href="aboutUs.html">About</a></li>
+        <li class="item"><a href="food.html">Order-food</a></li>
+
+    </ul>
+    
+</nav>
+<hr>
+ 
+<h1 style="justify-content: center;margin-left: 10px; ">Book Your Room</h1>
+    <h1 style="margin-left: 10px;" >Hotel</h1>
+    <form method="POST" action="process3.php">
+        <label for="name">Name:</label>
+        <input type="text" name="name"><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email"><br>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone"><br>
+        <label for="date">Date:</label>
+        <input type="date" name="date"><br>
+        <label for="time">Time:</label>
+        <input type="time" name="time"><br>
+        <label for="num_person">Number of persons:</label>
+        <input type="number" name="num_persons" min="1" max="10" value="1" onchange="calculateTotalPrice()"><br><br>
+        <label for="price_per_person">cost per person:</label>
+        <input type="text" name="price_per_person" value="1000" readonly><br><br>
+        <label for="total_price">Total Price:</label>
+        <input type="text" name="total_price" value="1000" readonly><br><br>
+        <button type="submit" name="submit">Book Ticket</button>
+    </form>
+    
+
+    <script>
+        function calculateTotalPrice() {
+            var numTickets = parseInt(document.getElementsByName("num_persons")[0].value);
+            var pricePerTicket = parseInt(document.getElementsByName("price_per_person")[0].value);
+            var totalPrice = numTickets * pricePerTicket;
+            document.getElementsByName("total_price")[0].value = totalPrice;
+        }
+
+        function generateQR(url) {
+            var qr = new QRious({
+                element: document.getElementById('qr-code'),
+                size: 200,
+                value: url
+            });
+            return qr.toDataURL('image/png');
+        }
+
+    </script>
+     </form>
+    
+</body>
+</html>

@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body {
+height: 100vh;
+width: 100%;
+display: flex;
+flex-direction: column; /* Set the flex-direction to column */
+background-image: url(pexels-fwstudio-129731.jpg);
+
+}
+
+
+
+#navbar {
+display: flex;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background: #fae9fb;
+color: #fff;
+padding: 10px;
+padding-left: 0px;
+z-index: 1000;
+}
+
+#navbar::before {
+content: "";
+background-color: #EEBF87;
+position: absolute;
+z-index: -1;
+height: 100%;
+width: 100%;
+}
+
+#navbar ul {
+display: flex;
+}
+
+#navbar ul li {
+list-style-type: none;
+}
+
+#navbar ul li a {
+text-decoration: none;
+padding: 8px;
+color: white;
+border-radius: 24px;
+}
+
+#navbar ul li a:hover {
+color: red;
+background-color: white;
+}
+
+#logo {
+margin-top: 4px;
+margin-left: 4px;
+}
+
+#logo img {
+height: 40px;
+width: 100px;
+margin: 6px;
+border: 3px solid white;
+border-radius: 30px;
+}
+
+@media screen and (max-width: 410px) {
+#navbar {
+ flex-direction: column;
+}
+}
+
+/* About page */
+
+.about{
+    width: 100%;
+    padding: 78px 0px;
+    
+
+}
+.about img{
+    height: auto;
+    width: 420px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+
+}
+.about-text{
+    width: 100%;
+    max-width:600px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+    border-radius: 15px; /* Optional: Rounded corners */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Box shadow for the glass effect */
+    transform: translateZ(30px); /* 3D effect */
+    padding: 40px; /* Padding to make text readable */
+
+}
+
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-text h1{
+    color: black;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+
+}
+.about-text h5{
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+
+}
+.about-text p{
+    color: black;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-text h1 {
+        font-size: 6vw;
+    }
+
+    .about-text h5 {
+        font-size: 3vw;
+    }
+
+    .about-text p {
+        font-size: 2vw;
+    }
+
+    .about {
+        padding: 10% 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about img {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        width: 90%;
+    }
+}

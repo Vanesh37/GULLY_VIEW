@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zomato.com | order food online </title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1{
+    color: white;    
+}
+p{
+    color: white;
+}
+/* styling the navigation bar */
+#navbar::before{
+    content: "";
+    background-color: #cb202d;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style-type: none;
+}
+#navbar ul li a{
+    text-decoration: none;
+    padding: 8px;
+    color: white;
+    border-radius: 24px;
+}
+#navbar ul li a:hover{
+    color: red;
+    background-color: white;
+}
+#logo{
+    margin-top: 4px;
+    margin-left: 4px;
+}
+#logo img{
+    height: 40px;
+    margin: 6px;
+    border: 3px solid white;
+    border-radius: 30px;
+}
+
+@media screen and (max-width:410px){
+    #navbar{
+        flex-direction: column;
+    }
+    
+}
+
+/* styling the home section */
+#home::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: #ca202c;
+    opacity: 0.95;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+button{
+    color: white;
+    background-color: #cb202d;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+button:hover{
+    background-color: white;
+    color: #cb202d;
+    cursor: pointer;
+    border: 2px solid #cb202d;
+}
+
+.h-primary{
+    font-size: 1.8rem;
+    padding: 10px;
+}
+#home p{
+    color: white;
+}
+#home h1{
+    text-align: center;
+    color: white;
+}
+
+/* styling the main container */
+input:hover{
+    background-color: whitesmoke;
+    border: 1px solid #cb202d;
+    color: #cb202d;
+}
+input{
+    margin-top: 20px;
+    color: white;
+    background-color: #cb202d;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    font-weight: 400;
+    
+}
+.main-conatiner{
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    background-color: #ca202c;
+}
+.con1{
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.con2{
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+div .box img{
+    width: 200px;
+    height: 120px;
+}
+.box1,.box2,.box3{
+    width: 250px;
+    height: 450px;
+    text-align: center;
+    background-color: #ca202c;
+    border-radius: 15px;
+    border: 2px solid white;
+    margin: 20px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: inset 2px 1px 10px white;
+    
+}
+.box4{
+    width: 250px;
+    height: 450px;
+    text-align: center;
+    background-color: #ca202c;
+    border-radius: 15px;
+    border: 2px solid whitesmoke;
+    margin: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: inset 2px 1px 10px white;
+}
+#up{
+    margin-top: 10px;
+}
+
+.box{
+    transition: transform 1s ease-in-out 0s;
+
+}
+.box:hover{
+    transform: rotate(10deg);
+}
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://techstory.in/wp-content/uploads/2015/02/spoonlogo1.png" alt="zomato logo">
+        </div>
+        <ul>
+            <li class="item"><a href="#">home</a></li>
+            <li class="item"><a href="#">services</a></li>
+            <li class="item"><a href="#">contact</a></li>
+            <li class="item"><a href="#">about</a></li>
+            <li class="item"><a href="#">order-food</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <section id="home">
+        <h1 class="h-primary">eat what makes you happy!</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adror ad odit rem blanditiis incidunt similique, neque dolorum qui, hic dolorem quae, sint corrupti?</p>
+            <p>Lorem ipsum dlor siores sequi quis hic!</p>
+            <br> 
+            <button class="btn">know-more</button>
+    </section>
+
+<div class="main-conatiner">
+    <div class="con1">
+        <div class="box box1">
+            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F13%2FUltimate-Veggie-Burgers-FT-Recipe-0821.jpg&q=60" alt="burger">
+            <h1>Burger</h1>
+            <p id="up">A hamburger is a food consisting of one or more cooked patties—usually ground meat, typically beef—placed inside a sliced bun or bread roll.</p>
+            <input type="submit" value="read-more">
+        </div>
+        <div class="box box2">
+            <img src="https://cdnb.artstation.com/p/assets/images/images/027/076/601/large/mehul-pandey-momo-2.jpg?1590522716" alt="momos">
+            <h1>Momos</h1>
+            <p id="up">Momo is a type of dumpling dish popular primarily in Nepal, Tibet, Pakistan, and India. Momo can be found in the cuisines of Nepal and Tibet.</p>
+            <input type="submit" value="read-more">
+        </div>
+        <div class="box box3">
+            <img src="https://cdn.dribbble.com/users/916023/screenshots/14928120/media/8aafde26eff4b73056128f36648b71d0.png?compress=1&resize=400x300" alt="pizza">
+            <h1>Pizza</h1>
+            <p id="up">Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients, which is then baked at a high temperature, traditionally in a wood-fired oven.</p>
+            <input type="submit" value="read-more">
+        </div>
+    </div>
+    <div class="con2">
+        <div class="box box4">
+            <img src="https://static.toiimg.com/photo/72273915.cms" alt="shawrama">
+            <h1>shawrama</h1>
+            <p id="up">Shawarma is a popular Middle Eastern dish consisting of meat cut into thin slices, stacked in a cone-like shape, and roasted on a slowly-turning vertical rotisserie or spit.</p>
+            <input type="submit" value="read-more">
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>
+
+
+<nav id="navbar">
+    <div id="logo">
+        <img src="logo.jpg" alt="zomato logo">
+    </div>
+    <ul>
+        <li class="item"><a href="home.html">home</a></li>
+        <li class="item"><a href="#">services</a></li>
+        <li class="item"><a href="#">contact</a></li>
+        <li class="item"><a href="#">about</a></li>
+        <li class="item"><a href="#">order-food</a></li>
+    </ul>
+</nav>
+<hr>
+<div id="hospital">
+    <div class="hospital">
+        <div class="image">
+            <img src="govt.jpg" alt="#">
+            <p style="font-weight: bold;font-family: 'Times New Roman', Times, serif;margin-left: 30%;">Govt Museum</p>
+            <p style="overflow:hidden;margin-top: 0%; height: 80px;">The Government Museum in Bangalore is one of the oldest museums in India, established in 1865 by the Mysore State with the guidance of Surgeon Edward Balfour </p>
+    
+        </div><br>
+           <button><a style="text-decoration: none; color: #fff;" href="book.html">Add ticket</a></button>
+        </div>
+        <div class="hospital">
+            <div class="image">
+                <img src="Mysuru Sand Sculpture Museum (14).jpg" alt="#">
+                <p style="font-weight: bold;font-family: 'Times New Roman', Times, serif;margin-left: 38%;">Mysuru</p>
+                <p style="margin-top: 0%;overflow:hidden;">Mysore Sand Sculpture Museum: This museum showcases the incredible talent of local artists through intricately carved sand sculptures.</p>
+         </div><br>
+         <button><a style="text-decoration: none; color: #fff;border: 2px solid black;" href="book1.html">Add ticket</a></button>
+       

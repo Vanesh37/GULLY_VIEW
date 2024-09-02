@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+
+.order-form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="Gully-View-11-2-2024.jpg" alt="zomato logo">
+        </div>
+        <ul>
+            <li class="item"><a href="home.html">Home</a></li>
+            <li class="item"><a href="services.html">services</a></li>
+            <li class="item"><a href="contactus.html">FeedBack</a></li>
+            <li class="item"><a href="aboutUs.html">about</a></li>
+            <li class="item"><a href="food.html">order-food</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <div class="order-form">
+        <h2>Food Order Form</h2>
+        <label for="foodName">Food Name:</label>
+        <input type="text" id="foodName" placeholder="Enter food name">
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" placeholder="Enter quantity" min="1">
+
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" placeholder="Enter delivery address"></textarea>
+
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

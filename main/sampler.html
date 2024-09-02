@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tourism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #hospital {
+            width: 100%;
+            margin-top: 70px;
+        }
+
+        .hospital {
+            margin: 20px;
+            width: 300px;
+            height: auto;
+            background-color: transparent;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.25);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            -webkit-box-shadow: -1px -0.5px 17px 13px #dddddd;
+            -moz-box-shadow: -1px -0.5px 17px 13px #dddddd;
+            box-shadow: -1px -0.5px 17px 13px #dddddd;
+            text-align: center;
+        }
+
+        .hospital img {
+            width: 96%;
+            height: 50%;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: blue;
+            margin: 5px;
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button a {
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        .button {
+            width: 200px;
+            height: 70px;
+            margin-top: 40px;
+            margin-left: 20px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="Gully-View-11-2-2024.jpg" alt="zomato logo">
+        </div>
+        <ul>
+            <li class="item"><a href="home.html">home</a></li>
+            <li class="item"><a href="services.html">services</a></li>
+            <li class="item"><a href="contactus.html">contact</a></li>
+            <li class="item"><a href="aboutUs.html">about</a></li>
+            <li class="item"><a href="food.html">order-food</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <div id="hospital">
+        <div class="hospital" id="hospital1">
+            <img src="hospital.jpeg" alt="#">
+            <p style="font-weight: bold;font-family: 'Times New Roman', Times, serif;font-size: 1.5em;">Kusuma Hospital</p>
+            <p style="margin-top: 0%;overflow:hidden;"></p><br>
+            <p style="margin-left: 10px;"><span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span></p>
+            <div class="buuton">
+                <button><a href="https://kusumahospital.com/">Website</a></button>
+                <button><a href="https://maps.app.goo.gl/RLbU6rtckKCyJ7N36">Visit Now</a></button>
+                <span id="distance1" style="font-size: 1.2em; margin-top: 10px;"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            var userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            var hospitalLocation = new google.maps.LatLng(40.7128, -74.0060); // Example hospital location
+            var distance = google.maps.geometry.spherical.computeDistanceBetween(userLocation, hospitalLocation) / 1000; // Convert meters to kilometers
+            document.getElementById("distance1").innerText = "Distance: " + distance.toFixed(2) + " km";
+        }
+
+        getLocation();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry"></script>
+</body>
+</html>

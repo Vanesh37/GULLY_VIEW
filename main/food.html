@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> order food online </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+     
+
+/* styling the home section */
+#home::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+   
+    opacity: 0.95;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 100px;
+
+}
+button{
+    color: white;
+    background-color: #cb202d;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+button:hover{
+    background-color: white;
+    color: #cb202d;
+    cursor: pointer;
+    border: 2px solid #cb202d;
+}
+
+#up{
+    overflow: hidden;
+    width: 100%;
+    height: 30%;
+}
+
+.h-primary{
+    font-size: 1.8rem;
+    padding: 10px;
+}
+#home p{
+    color: white;
+}
+#home h1{
+    text-align: center;
+    color: white;
+}
+.input{
+    margin-top: 40px;
+   
+    margin-left: 60px;
+}
+/* styling the main container */
+input:hover{
+    background-color: whitesmoke;
+    border: 1px solid #cb202d;
+    color: #cb202d;
+}
+input{
+    margin-top: 50px;
+    color: white;
+    background-color: #cb202d;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 10px 10px 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    font-weight: 400;
+    
+}
+.main-conatiner{
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+   
+}
+.main-conatiner h1{
+    margin-top: 10px;
+}
+.con1{
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.con2{
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+div .box img{
+    width: 200px;
+    height: 120px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.box1,.box2,.box3{
+    width: 250px;
+    height: 450px;
+    text-align: center;
+  
+    border-radius: 15px;
+    border: 2px solid white;
+    margin: 20px;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: inset 2px 1px 10px white;
+    
+}
+.box4{
+    width: 250px;
+    height: 450px;
+    text-align: center;
+    
+    border-radius: 15px;
+    border: 2px solid whitesmoke;
+    margin: 2px;
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-shadow: inset 2px 1px 10px white;
+}
+#up{
+    margin-top: 10px;
+}
+
+.box{
+    transition: transform 1s ease-in-out 0s;
+
+}
+.box:hover{
+    transform: rotate(10deg);
+}
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="Gully-View-11-2-2024.jpg" alt="zomato logo">
+        </div>
+        <ul>
+            <li class="item"><a href="home.html">Home</a></li>
+            <li class="item"><a href="services.html">Services</a></li>
+            <li class="item"><a href="contactus.html">FeedBack</a></li>
+            <li class="item"><a href="aboutUs.html">About</a></li>
+            <li class="item"><a href="food.html">Order-food</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <section id="home">
+        <h1 class="h-primary">eat what makes you happy!</h1>
+            <p>“A meal without cheese is like a day without sunshine.”</p>
+            <p>Eat breakfast like a king, lunch like a queen, and dinner like a pauper</p>
+            <br> 
+            <button class="btn">know-more</button>
+    </section>
+
+<div class="main-conatiner">
+    <div class="con1">
+        <div class="box box1">
+            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2021%2F07%2F13%2FUltimate-Veggie-Burgers-FT-Recipe-0821.jpg&q=60" alt="burger">
+            <h1>Burger</h1>
+            <p id="up">A hamburger is a food consisting of one or more cooked patties—usually ground meat, typically beef—placed inside a sliced bun or bread roll.</p>
+            <input type="submit" value="read-more">
+        </div>
+        <div class="box box2">
+            <img src="https://th.bing.com/th/id/OIP._tgM80_g7K1ymkC1gpvxZAHaE8?rs=1&pid=ImgDetMain" alt="momos">
+            <h1>Momos</h1>
+            <p id="up">Momo is a type of dumpling dish popular primarily in Nepal, Tibet, Pakistan, and India. Momo can be found in the cuisines of Nepal and Tibet.</p>
+           <input type="submit" value="read-more">
+        </div>
+        <div class="box box3">
+            <img src="https://cdn.dribbble.com/users/916023/screenshots/14928120/media/8aafde26eff4b73056128f36648b71d0.png?compress=1&resize=400x300" alt="pizza">
+            <h1>Pizza</h1>
+            <p id="up">Pizza is a dish of Italian origin consisting of a usually round, which is then baked at a high temperature, traditionally in a wood-fired oven.</p>
+            <input type="submit" value="read-more">
+        </div>
+    </div>
+    <div class="con2">
+        <div class="box box4">
+            <img src="https://static.toiimg.com/photo/72273915.cms" alt="shawrama">
+            <h1>shawrama</h1>
+            <p id="up">Shawarma is a popular Middle Eastern dish consisting of meat cut into thin slices, stacked in a cone-like shape, and roasted on a slowly-turning vertical rotisserie or spit.</p>
+            <input type="submit" value="read-more">
+        </div>
+    </div>
+</div>
+
+    
+</body>
+</html>
